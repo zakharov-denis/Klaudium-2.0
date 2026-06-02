@@ -1,0 +1,255 @@
+- generic [active] [ref=e1] [box=0,0,1200,7671]:
+  - banner [ref=e2] [box=0,0,1200,60]:
+    - generic [ref=e3] [box=10,0,1180,59]:
+      - link "Klaudium Studio" [ref=e4] [cursor=pointer] [box=50,20,153,20]:
+        - /url: /
+      - navigation "Primary" [ref=e5] [box=712,11,334,38]:
+        - link "Course" [ref=e6] [cursor=pointer] [box=712,11,80,38]:
+          - /url: /coursedemo
+        - link "Home" [ref=e7] [cursor=pointer] [box=804,11,69,38]:
+          - /url: /
+        - link "About" [ref=e8] [cursor=pointer] [box=885,11,69,38]:
+          - /url: /about
+        - link "Contact" [ref=e9] [cursor=pointer] [box=966,11,80,38]:
+          - /url: /contact
+      - link "Book a call" [ref=e10] [cursor=pointer] [box=1046,11,104,38]:
+        - /url: https://tidycal.com/denizzzai/45-minute-meeting
+  - region "Digital That Hits Hard" [ref=e11] [box=0,0,1200,900]:
+    - generic [ref=e13] [box=10,350,1180,396]:
+      - generic [ref=e14] [box=516,350,169,32]:
+        - generic [ref=e15] [box=517,351,48,30]: New
+        - strong [ref=e557] [box=565,359,119,14]: Klaudium Studio
+      - heading "Digital That Hits Hard" [level=1] [ref=e16] [box=242,418,716,72]
+      - paragraph [ref=e17] [box=294,514,612,58]:
+        - text: Forget slow agencies. We use Vibe Coding + AI to build premium websites in
+        - text: a fraction of the time at a fraction of the cost.
+      - generic [ref=e18] [box=456,702,288,44]:
+        - link "Get in touch" [ref=e19] [cursor=pointer] [box=456,702,142,44]:
+          - /url: /contact
+          - text: Get in touch
+          - generic [ref=e20] [box=564,716,15,15]: →
+        - link "View services" [ref=e21] [cursor=pointer] [box=614,702,130,44]:
+          - /url: /#services
+  - generic [ref=e24] [box=0,900,1200,6771]:
+    - generic [ref=e25] [box=0,0,0,0]:
+      - generic [ref=e26] [box=0,900,1200,243]:
+        - generic [ref=e31] [box=110,967,1665,25]:
+          - link "Morning Buddies" [ref=e32] [cursor=pointer] [box=110,967,170,25]:
+            - /url: http://morningbuddies.com/
+          - link "MGDL" [ref=e33] [cursor=pointer] [box=359,967,61,25]:
+            - /url: http://mgdl.ru/
+          - link "Banya Sauna" [ref=e34] [cursor=pointer] [box=500,967,129,25]:
+            - /url: https://saunaproject-78535503-9143c.web.app/
+          - link "White Waters Drink" [ref=e35] [cursor=pointer] [box=709,967,193,25]:
+            - /url: https://whitewatersdrink.com/
+          - link "Morning Buddies" [ref=e36] [cursor=pointer] [box=982,967,170,25]:
+            - /url: http://morningbuddies.com/
+          - link "MGDL" [ref=e37] [cursor=pointer] [box=1232,967,61,25]:
+            - /url: http://mgdl.ru/
+          - link "Banya Sauna" [ref=e38] [cursor=pointer] [box=1373,967,129,25]:
+            - /url: https://saunaproject-78535503-9143c.web.app/
+          - link "White Waters Drink" [ref=e39] [cursor=pointer] [box=1582,967,193,25]:
+            - /url: https://whitewatersdrink.com/
+        - paragraph [ref=e42] [box=519,1034,162,17]: Over 50+ business trust us
+      - generic [ref=e44] [box=0,1143,1200,1867]:
+        - generic [ref=e45] [box=40,1143,1120,107]:
+          - paragraph [ref=e49] [cursor=pointer] [box=561,1148,77,17]: Our Services
+          - heading "Service That Scale" [level=2] [ref=e52] [box=250,1195,700,55]
+        - generic [ref=e53] [box=100,1310,1000,1700]:
+          - generic [ref=e58] [box=630,1310,470,350]:
+            - paragraph [ref=e62] [cursor=pointer] [box=645,1363,158,17]: Mobile Apps from Scratch
+            - generic [ref=e63] [box=630,1404,470,160]:
+              - heading "Native Mobile Apps" [level=3] [ref=e65] [box=630,1404,470,39]
+              - paragraph [ref=e67] [box=630,1453,450,112]: "We build native iOS & Android apps from scratch using VIBE Coding. Everything is optimized: speed, UI, animations, load-time, and user flow. No template shortcuts — every screen is purposeful, minimal, and intuitive. Your app feels smooth, reacts instantly, and works beautifully on every device."
+            - paragraph [ref=e72] [cursor=pointer] [box=629,1590,58,17]: See more
+          - generic [ref=e74] [box=100,1760,470,350]:
+            - paragraph [ref=e78] [cursor=pointer] [box=115,1813,145,17]: Web Apps from Scratch
+            - generic [ref=e79] [box=100,1854,470,160]:
+              - heading "Built From The Vibe" [level=3] [ref=e81] [box=100,1854,470,39]
+              - paragraph [ref=e83] [box=100,1903,450,112]: We design and code your entire web app from zero using our modern VIBE workflow. Every logic block, every component, every interaction is built intentionally. Super fast load times, clean UI, structure that makes sense, and code built to scale. Perfect for dashboards, SaaS, internal tools, portals, and custom systems.
+            - paragraph [ref=e88] [cursor=pointer] [box=99,2040,58,17]: See more
+          - generic [ref=e96] [box=630,2210,470,350]:
+            - paragraph [ref=e100] [cursor=pointer] [box=645,2263,191,17]: Lead Generation Landing Pages
+            - generic [ref=e101] [box=630,2304,470,160]:
+              - heading "Pages That Convert" [level=3] [ref=e103] [box=630,2304,470,39]
+              - paragraph [ref=e105] [box=630,2353,450,112]: Built with psychology, spacing, and conversion principles baked in. Every section is intentional — no fillers, no bloated visuals. We use VIBE Coding to make pages that feel modern, scroll smoothly, and drive action. Perfect for ads, product launches, funnels, and lead-gen campaigns.
+            - paragraph [ref=e110] [cursor=pointer] [box=629,2490,58,17]: See more
+          - generic [ref=e112] [box=100,2660,470,350]:
+            - paragraph [ref=e116] [cursor=pointer] [box=115,2701,122,17]: Branding & Strategy
+            - generic [ref=e117] [box=100,2743,470,183]:
+              - heading "Complex Service Case" [level=3] [ref=e119] [box=100,2743,470,39]
+              - paragraph [ref=e121] [box=100,2792,450,134]: Market research, positioning, and brand identity for beverage manufacturers. We dive deep into market trends, analyze your competition, and identify untapped emotional triggers that make your products irresistible on retail shelves. Our approach builds lasting connections with consumers through strategic positioning and stunning visual systems.
+            - paragraph [ref=e126] [cursor=pointer] [box=99,2951,58,17]: See more
+      - generic [ref=e130] [box=0,3010,1200,1326]:
+        - generic [ref=e131] [box=40,3110,1120,176]:
+          - paragraph [ref=e135] [cursor=pointer] [box=579,3115,42,17]: Pricing
+          - generic [ref=e136] [box=40,3161,1120,124]:
+            - heading "Custom Plans for Every Business" [level=2] [ref=e138] [box=250,3161,700,55]
+            - paragraph [ref=e140] [box=300,3231,600,54]: Because every workflow is unique — we quote based on what you actually need
+        - generic [ref=e142] [box=40,3345,1120,890]:
+          - generic [ref=e143] [box=40,3345,550,446]:
+            - generic [ref=e144] [box=70,3365,490,148]:
+              - paragraph [ref=e149] [box=110,3369,450,28]: Landing Pages
+              - heading "$249/month" [level=2] [ref=e151] [box=70,3415,184,39]
+              - paragraph [ref=e154] [box=70,3469,490,45]: Perfect for founders who need a sharp, high-converting landing page up and running quickly.
+            - link "Choose this plan" [ref=e155] [cursor=pointer] [box=70,3549,139,36]:
+              - /url: /contact
+              - paragraph [ref=e159] [box=88,3558,103,18]: Choose this plan
+            - generic [ref=e160] [box=70,3620,490,152]:
+              - paragraph [ref=e162] [box=70,3620,115,22]: "What's Included:"
+              - paragraph [ref=e168] [box=100,3652,460,22]: Bold, high-converting landing page
+              - paragraph [ref=e174] [box=100,3684,460,22]: Premium UI/UX designed for impact
+              - paragraph [ref=e180] [box=100,3717,460,22]: Mobile-first, lightning-fast build
+              - paragraph [ref=e186] [box=100,3749,460,22]: Delivery in 7–14 days
+          - generic [ref=e187] [box=610,3345,550,446]:
+            - generic [ref=e188] [box=640,3365,490,148]:
+              - generic [ref=e189] [box=640,3365,490,35]:
+                - paragraph [ref=e194] [box=680,3369,369,28]: Web Services
+                - paragraph [ref=e198] [cursor=pointer] [box=1069,3374,46,17]: Popular
+              - heading "$599/month" [level=2] [ref=e200] [box=640,3415,183,39]
+              - paragraph [ref=e203] [box=640,3469,490,45]: For businesses that need complete web services — a full, modern website built for performance, trust, and growth.
+            - link "Choose this plan" [ref=e206] [cursor=pointer] [box=640,3549,490,36]:
+              - /url: https://tidycal.com/denizzzai/45-minute-meeting
+              - paragraph [ref=e210] [box=834,3558,103,18]: Choose this plan
+            - generic [ref=e211] [box=640,3620,490,152]:
+              - paragraph [ref=e213] [box=640,3620,115,22]: "What's Included:"
+              - paragraph [ref=e219] [box=670,3652,460,22]: Design And Development
+              - paragraph [ref=e225] [box=670,3684,460,22]: CRM & Workflow Integrations
+              - paragraph [ref=e231] [box=670,3717,460,22]: Includes Hosting
+              - paragraph [ref=e237] [box=670,3749,460,22]: "Delivery: 7–10 Days"
+          - generic [ref=e238] [box=40,3812,1120,424]:
+            - generic [ref=e239] [box=70,3832,1060,126]:
+              - paragraph [ref=e244] [box=110,3835,1020,28]: Apps & Customs
+              - heading "$7000 +" [level=2] [ref=e246] [box=70,3882,127,39]
+              - paragraph [ref=e249] [box=70,3935,1060,22]: For teams who need custom applications or bespoke solutions tailored to their unique requirements—built exactly your way.
+            - link "Schedule a call" [ref=e250] [cursor=pointer] [box=70,3993,128,36]:
+              - /url: https://tidycal.com/denizzzai/45-minute-meeting
+              - paragraph [ref=e254] [box=88,4002,92,18]: Schedule a call
+            - generic [ref=e255] [box=70,4064,1060,152]:
+              - paragraph [ref=e257] [box=70,4064,115,22]: "What's Included:"
+              - paragraph [ref=e263] [box=100,4096,1030,22]: Custom App Development
+              - paragraph [ref=e269] [box=100,4128,1030,22]: Tailored Solution Architecture
+              - paragraph [ref=e275] [box=100,4161,1030,22]: Full Technical Consultation
+              - paragraph [ref=e281] [box=100,4193,1030,22]: "Delivery: Custom Timeline"
+      - generic [ref=e282] [box=0,4336,1200,886]:
+        - generic [ref=e283] [box=40,4436,1120,204]:
+          - paragraph [ref=e287] [cursor=pointer] [box=563,4441,75,17]: Testimonials
+          - generic [ref=e288] [box=40,4487,1120,152]:
+            - heading "Stories From The People We Build For" [level=2] [ref=e290] [box=250,4487,700,110]
+            - paragraph [ref=e292] [box=300,4612,600,27]: Real businesses, real results.
+        - generic [ref=e293] [box=100,4699,1000,422]:
+          - generic [ref=e294] [box=100,4699,490,190]:
+            - paragraph [ref=e303] [box=130,4759,430,45]: The landing page they built captured more leads in 2 weeks than my old site did in 3 months. It actually felt alive, you know
+            - generic [ref=e307] [box=185,4827,375,38]:
+              - paragraph [ref=e309] [box=185,4827,375,22]: James Carter
+              - paragraph [ref=e311] [box=185,4854,375,12]: CEO at TechFlow Solutions
+          - generic [ref=e312] [box=610,4699,490,190]:
+            - paragraph [ref=e321] [box=640,4759,430,45]: I've worked with tons of agencies. Klaudium Studio STDIO is different. They code from feeling, not from a playbook.
+            - generic [ref=e325] [box=695,4827,375,38]:
+              - paragraph [ref=e327] [box=695,4827,375,22]: Sophia Martinez
+              - paragraph [ref=e329] [box=695,4854,375,12]: Operations Manager at NexaCorp
+          - generic [ref=e330] [box=100,4909,490,212]:
+            - paragraph [ref=e339] [box=130,4969,430,67]: I'm not a techie, but they never made me feel stupid. Every change I asked for, they explained with patience—and then did it even better than I expected.
+            - generic [ref=e343] [box=185,5060,375,38]:
+              - paragraph [ref=e345] [box=185,5060,375,22]: David Reynolds
+              - paragraph [ref=e347] [box=185,5086,375,12]: Head of Sales at GrowthPeak
+          - generic [ref=e348] [box=610,4909,490,212]:
+            - paragraph [ref=e357] [box=640,4969,430,67]: "\"Customer support is now seamless. Our response time improved drastically, and satisfaction levels are at an all-time high, thanks to xtract\""
+            - generic [ref=e361] [box=695,5060,375,38]:
+              - paragraph [ref=e363] [box=695,5060,375,22]: Emily Wong
+              - paragraph [ref=e365] [box=695,5086,375,12]: Customer Success Lead at SupportHive
+      - generic [ref=e366] [box=0,5221,1200,979]:
+        - generic [ref=e367] [box=40,5321,1120,285]:
+          - paragraph [ref=e371] [cursor=pointer] [box=562,5326,76,17]: What We Do
+          - generic [ref=e372] [box=40,5373,1120,233]:
+            - heading "Never Worry About Your Website Ever Again" [level=2] [ref=e374] [box=250,5373,700,110]
+            - paragraph [ref=e376] [box=300,5498,600,108]: At Klaudium Studio STUDIO, we craft custom-built websites for small businesses across the US and Canada—VIBE-coded for performance and search visibility. We handle ongoing updates and prioritize long-term partnerships to help your business grow.
+        - generic [ref=e377] [box=40,5666,1120,434]:
+          - generic [ref=e384] [box=70,5726,490,105]:
+            - paragraph [ref=e386] [box=70,5726,490,28]: MOBILE FIRST DESIGN
+            - paragraph [ref=e388] [box=70,5764,490,67]: We start building your site for mobile devices first making sure the code is as lean and optimized with no bloated waste and makes the site even more responsive.
+          - generic [ref=e395] [box=640,5726,490,105]:
+            - paragraph [ref=e397] [box=640,5726,490,28]: Cost-Smart by Design
+            - paragraph [ref=e399] [box=640,5764,490,67]: Great design should pay for itself. Fast, focused websites reduce ad waste, cut support requests, and lower the cost of acquiring each new customer.
+          - generic [ref=e406] [box=70,5953,490,105]:
+            - paragraph [ref=e408] [box=70,5953,490,28]: SEO SERVICES
+            - paragraph [ref=e410] [box=70,5991,490,67]: We have an in-house SEO specialist who understands local SEO and how to rank in your local market with plenty of case studies to show results and monthly reports.
+          - generic [ref=e417] [box=640,5953,490,105]:
+            - paragraph [ref=e419] [box=640,5953,490,28]: FULLY RESPONSIVE
+            - paragraph [ref=e421] [box=640,5991,490,67]: Your website will fit all mobile screens sizes, tablets, and desktop sizes so visitors can access your site from anywhere and see a beautiful site no matter the screen size.
+      - generic [ref=e422] [box=0,6200,1200,1095]:
+        - generic [ref=e423] [box=40,6300,1120,107]:
+          - paragraph [ref=e427] [cursor=pointer] [box=583,6305,34,17]: FAQs
+          - heading "Questions we get all the time." [level=2] [ref=e430] [box=250,6352,700,55]
+        - generic [ref=e433] [box=200,6467,800,360]:
+          - paragraph [ref=e438] [cursor=pointer] [box=230,6495,724,22]: What is your pricing ?
+          - paragraph [ref=e445] [cursor=pointer] [box=230,6565,724,22]: How are you different than other Agencies ?
+          - paragraph [ref=e452] [cursor=pointer] [box=230,6636,724,22]: Do you offer a guarantee ?
+          - paragraph [ref=e459] [cursor=pointer] [box=230,6706,724,22]: What kind of support do you provide after launch?
+          - paragraph [ref=e466] [cursor=pointer] [box=230,6777,724,22]: How long does it take to launch my website or AI agent?
+        - generic [ref=e471] [box=225,6887,750,308]:
+          - heading "Ready to Forge the Future?" [level=2] [ref=e473] [box=255,6967,690,55]
+          - paragraph [ref=e475] [box=350,7037,500,27]: Book a Call Today and Start Automating
+          - link "Book a free call" [ref=e477] [cursor=pointer] [box=525,7079,150,36]:
+            - /url: https://tidycal.com/denizzzai/45-minute-meeting
+            - paragraph [ref=e481] [box=543,7088,93,18]: Book a free call
+    - contentinfo [ref=e485] [box=0,7295,1200,273]:
+      - generic [ref=e486] [box=40,7359,1120,145]:
+        - generic [ref=e488] [box=40,7359,550,101]:
+          - link "Klaudium Studio" [ref=e489] [cursor=pointer] [box=40,7359,115,36]:
+            - /url: /
+            - paragraph [ref=e491] [box=40,7359,200,36]: Klaudium Studio
+          - paragraph [ref=e493] [box=40,7415,300,45]: Klaudium Studio– Automate Smarter, Optimize Faster, and Grow Stronger.
+        - generic [ref=e494] [box=610,7359,550,145]:
+          - generic [ref=e495] [box=610,7359,177,115]:
+            - paragraph [ref=e497] [box=610,7359,39,27]: Links
+            - paragraph [ref=e499] [box=610,7393,59,22]:
+              - link "Services" [ref=e500] [cursor=pointer] [box=610,7394,59,19]:
+                - /url: /#services
+            - paragraph [ref=e502] [box=610,7422,57,22]:
+              - link "Benefits" [ref=e503] [cursor=pointer] [box=610,7424,57,19]:
+                - /url: /#benefits
+            - paragraph [ref=e505] [box=610,7452,47,22]:
+              - link "Pricing" [ref=e506] [cursor=pointer] [box=610,7453,47,19]:
+                - /url: /#pricing
+          - generic [ref=e507] [box=797,7359,177,145]:
+            - paragraph [ref=e509] [box=797,7359,47,27]: Pages
+            - paragraph [ref=e511] [box=797,7393,43,22]:
+              - link "Home" [ref=e512] [cursor=pointer] [box=797,7394,43,19]:
+                - /url: /
+            - paragraph [ref=e514] [box=797,7422,43,22]:
+              - link "About" [ref=e515] [cursor=pointer] [box=797,7424,43,19]:
+                - /url: /about
+            - paragraph [ref=e517] [box=797,7452,57,22]:
+              - link "Contact" [ref=e518] [cursor=pointer] [box=797,7453,57,19]:
+                - /url: /contact
+            - paragraph [ref=e520] [box=797,7481,50,22]:
+              - link "Course" [ref=e521] [cursor=pointer] [box=797,7483,50,19]:
+                - /url: /coursedemo
+          - generic [ref=e522] [box=983,7359,177,115]:
+            - paragraph [ref=e524] [box=983,7359,55,27]: Socials
+            - paragraph [ref=e526] [box=983,7393,69,22]:
+              - link "Instagram" [ref=e527] [cursor=pointer] [box=983,7394,69,19]:
+                - /url: https://www.instagram.com/vibe_founding?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==
+            - paragraph [ref=e529] [box=983,7422,57,22]:
+              - link "Linkedin" [ref=e530] [cursor=pointer] [box=983,7424,57,19]:
+                - /url: https://www.linkedin.com/in/zakharov-denis/
+            - paragraph [ref=e532] [box=983,7452,70,22]:
+              - link "X(Twitter)" [ref=e533] [cursor=pointer] [box=983,7453,70,19]:
+                - /url: https://x.com
+    - contentinfo [ref=e536] [box=0,7568,1200,104]:
+      - generic [ref=e537] [box=40,7593,1120,54]:
+        - generic [ref=e538] [box=40,7593,198,54]:
+          - paragraph [ref=e539] [box=40,7593,198,17]:
+            - link "Copyright 2026 Klaudium Studio" [ref=e540] [cursor=pointer] [box=40,7592,198,17]:
+              - /url: /terms-of-use
+          - paragraph [ref=e541] [box=40,7629,198,17]
+        - paragraph [ref=e543] [box=1038,7593,79,17]:
+          - link "Terms of Use" [ref=e544] [cursor=pointer] [box=1038,7592,79,17]:
+            - /url: /terms-of-use
+        - paragraph [ref=e546] [box=804,7592,83,17]:
+          - link "Privacy Policy" [ref=e547] [cursor=pointer] [box=804,7591,83,17]:
+            - /url: /privacy-page
+  - button "Open Next.js Dev Tools" [ref=e553] [cursor=pointer] [box=22,759,32,32]:
+    - img [ref=e554] [box=22,755,40,40]
+  - alert [ref=e558] [box=-1,7670,1,1]
