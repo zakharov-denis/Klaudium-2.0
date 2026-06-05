@@ -27,19 +27,25 @@ export function HeroSection() {
       <div className="pointer-events-none absolute inset-x-0 top-16 lg:top-20">
         <div className="mx-auto flex min-h-[calc(100vw*0.55)] max-w-[1792px] items-center px-5 py-12 sm:min-h-[520px] sm:px-8 lg:min-h-[640px] lg:px-14">
           <div className="pointer-events-auto max-w-xl">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-red-500/30 bg-black/55 px-4 py-2 text-white shadow-[0_0_36px_rgba(225,6,0,0.22)] backdrop-blur-sm">
-              <Star className="h-4 w-4 fill-klaudium-red text-klaudium-red" />
-              <span className="text-sm font-medium">100% Practical Hands-On</span>
+            <div className="mb-6 flex flex-wrap items-center gap-2">
+              {["#0 to 1", "#product management", "#first-hand mentorship"].map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center gap-1.5 rounded-full border border-red-500/30 bg-red-950/30 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-red-400 shadow-[0_0_18px_rgba(225,6,0,0.15)] backdrop-blur-sm transition-colors hover:border-red-500/60 hover:text-red-300"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
 
             <h1 className="mb-6 text-balance text-4xl font-bold leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-7xl">
-              Stop Coding.
-              <span className="mt-2 block">Start Building.</span>
+              Make agents built for you,
+              <span className="mt-2 block">not instead of you.</span>
             </h1>
 
             <p className="mb-10 max-w-lg text-balance text-lg leading-relaxed text-white/74 lg:text-xl">
               {
-                "Vibe coding was named Collins Dictionary's Word of the Year for a reason. Learn how to leverage it with Replit and build production-ready apps."
+                "At Google, AI already generates more than 25% of new code. At Microsoft, it is up to 30%.* Design custom AI agents that support your vision, help you research, plan, build, test, and confidently launch your next project and features."
               }
             </p>
 
