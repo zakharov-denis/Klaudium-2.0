@@ -1,5 +1,6 @@
 import { ArrowUpRight, Star } from "lucide-react";
 import Image from "next/image";
+import { EnrollButton } from "./EnrollButton";
 import { COURSE_ENROLL_URL } from "./links";
 
 const avatars = [
@@ -50,12 +51,12 @@ export function HeroSection() {
             </p>
 
             <div className="mb-12 flex">
-              <a className="enroll-glass-button group" href={COURSE_ENROLL_URL}>
+              <EnrollButton className="enroll-glass-button group">
                 <span className="enroll-glass-label">Enroll Now</span>
                 <span className="enroll-glass-arrow">
                   <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </span>
-              </a>
+              </EnrollButton>
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">

@@ -2,6 +2,7 @@
 
 import { ArrowLeft, ArrowRight, ArrowUpRight, Star } from "lucide-react";
 import { useState } from "react";
+import { EnrollButton } from "./EnrollButton";
 import { COURSE_ENROLL_URL } from "./links";
 
 const testimonials = [
@@ -105,14 +106,14 @@ export function TestimonialsSection() {
           </p>
 
           <div className="flex justify-center">
-            <a className="group inline-flex items-center gap-0" href={COURSE_ENROLL_URL}>
+            <EnrollButton className="group inline-flex items-center gap-0">
               <span className="rounded-l-xl bg-klaudium-red px-6 py-3.5 font-medium text-white transition-colors hover:bg-bright-red">
                 Enroll Now
               </span>
               <span className="rounded-r-xl bg-soft-black p-3.5 text-white transition-colors group-hover:bg-ink-black">
                 <ArrowUpRight className="h-5 w-5" />
               </span>
-            </a>
+            </EnrollButton>
           </div>
         </div>
       </div>

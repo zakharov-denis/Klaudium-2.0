@@ -1,5 +1,6 @@
 import { ArrowUpRight, ExternalLink, Star } from "lucide-react";
 import Image from "next/image";
+import { EnrollButton } from "./EnrollButton";
 import { COURSE_ENROLL_URL, DENIS_LINKEDIN_URL } from "./links";
 
 export function InstructorSection() {
@@ -57,14 +58,14 @@ export function InstructorSection() {
               </p>
 
               <div className="flex">
-                <a className="group inline-flex items-center gap-0" href={COURSE_ENROLL_URL}>
+                <EnrollButton className="group inline-flex items-center gap-0">
                   <span className="rounded-l-xl bg-klaudium-red px-6 py-3.5 font-medium text-white transition-colors hover:bg-bright-red">
                     Enroll Now
                   </span>
                   <span className="rounded-r-xl border-l border-white/10 bg-ink-black p-3.5 text-white transition-colors group-hover:bg-soft-black">
                     <ArrowUpRight className="h-5 w-5" />
                   </span>
-                </a>
+                </EnrollButton>
               </div>
             </div>
           </div>
