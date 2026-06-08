@@ -10,9 +10,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { X } from "lucide-react";
 import { FormEvent, useEffect, useRef, useState } from "react";
 
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY ?? "pk_test_placeholder"
-);
+const stripePublishableKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+const stripePromise = stripePublishableKey ? loadStripe(stripePublishableKey) : null;
 
 /* ─── Thank-you screen ─────────────────────────────────────── */
 function ThankYou({ onClose }: { onClose: () => void }) {
@@ -128,6 +127,12 @@ export function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
 
   const handleDetailsSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
+    if (!stripePromise) {
+      setFetchError("Enrollment payments are not configured yet.");
+      return;
+    }
+
     setFetching(true);
     setFetchError(null);
     try {
