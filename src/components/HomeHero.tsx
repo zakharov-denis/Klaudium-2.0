@@ -1,187 +1,75 @@
-"use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import type { CSSProperties } from "react";
 
-const appIcons = [
-  { name: "OpenAI", mark: "AI", color: "#10a37f", glow: "rgba(16, 163, 127, 0.55)" },
-  { name: "Claude", mark: "Cl", color: "#d97745", glow: "rgba(217, 119, 69, 0.5)" },
-  { name: "Gemini", mark: "G", color: "#8ab4f8", glow: "rgba(138, 180, 248, 0.58)" },
-  { name: "LangChain", mark: "LC", color: "#2dd4bf", glow: "rgba(45, 212, 191, 0.52)" },
-  { name: "LangGraph", mark: "LG", color: "#22c55e", glow: "rgba(34, 197, 94, 0.52)" },
-  { name: "CrewAI", mark: "Cr", color: "#a78bfa", glow: "rgba(167, 139, 250, 0.55)" },
-  { name: "n8n", mark: "n8n", color: "#ff6d5a", glow: "rgba(255, 109, 90, 0.52)" },
-  { name: "Supabase", mark: "S", color: "#3ecf8e", glow: "rgba(62, 207, 142, 0.52)" },
-  { name: "Firebase", mark: "Fb", color: "#ffca28", glow: "rgba(255, 202, 40, 0.48)" },
-  { name: "PostgreSQL", mark: "Pg", color: "#7dd3fc", glow: "rgba(125, 211, 252, 0.5)" },
-  { name: "Redis", mark: "Rd", color: "#ef4444", glow: "rgba(239, 68, 68, 0.5)" },
-  { name: "Notion", mark: "N", color: "#f8fafc", glow: "rgba(248, 250, 252, 0.48)" },
-  { name: "Google Drive", mark: "Dr", color: "#34a853", glow: "rgba(52, 168, 83, 0.5)" },
-  { name: "Slack", mark: "Sl", color: "#ec4899", glow: "rgba(236, 72, 153, 0.5)" },
-  { name: "Gmail", mark: "Gm", color: "#ea4335", glow: "rgba(234, 67, 53, 0.5)" },
-  { name: "Google Calendar", mark: "Cal", color: "#4285f4", glow: "rgba(66, 133, 244, 0.52)" },
-  { name: "Linear", mark: "Ln", color: "#a855f7", glow: "rgba(168, 85, 247, 0.54)" },
-  { name: "Jira", mark: "J", color: "#2684ff", glow: "rgba(38, 132, 255, 0.54)" },
-  { name: "Confluence", mark: "Cf", color: "#0052cc", glow: "rgba(0, 82, 204, 0.52)" },
-  { name: "Stripe", mark: "St", color: "#635bff", glow: "rgba(99, 91, 255, 0.55)" },
-  { name: "HubSpot", mark: "Hs", color: "#ff7a59", glow: "rgba(255, 122, 89, 0.52)" },
-  { name: "Salesforce", mark: "Sf", color: "#00a1e0", glow: "rgba(0, 161, 224, 0.52)" },
-  { name: "Shopify", mark: "Sh", color: "#95bf47", glow: "rgba(149, 191, 71, 0.52)" },
-  { name: "Calendly", mark: "Cy", color: "#006bff", glow: "rgba(0, 107, 255, 0.52)" },
-  { name: "Typeform", mark: "Tf", color: "#facc15", glow: "rgba(250, 204, 21, 0.48)" },
-  { name: "GitHub", mark: "Gh", color: "#f8fafc", glow: "rgba(248, 250, 252, 0.45)" },
-  { name: "Docker", mark: "D", color: "#2496ed", glow: "rgba(36, 150, 237, 0.54)" },
-  { name: "AWS", mark: "AWS", color: "#ff9900", glow: "rgba(255, 153, 0, 0.5)" },
-  { name: "Oracle", mark: "Or", color: "#f80000", glow: "rgba(248, 0, 0, 0.5)" }
+const floatingIcons = [
+  { src: "/assets/mobbin-icons/icon-4.webp", className: "home-hero-icon-creme", size: 112 },
+  { src: "/assets/mobbin-icons/icon-9.webp", className: "home-hero-icon-openai", size: 112 },
+  { src: "/assets/mobbin-icons/icon-2.png", className: "home-hero-icon-dropbox", size: 114 },
+  { src: "/assets/mobbin-icons/dots.webp", className: "home-hero-icon-dots", size: 112 },
+  { src: "/assets/mobbin-icons/orange.webp", className: "home-hero-icon-orange", size: 112 },
+  { src: "/assets/mobbin-icons/icon-5.webp", className: "home-hero-icon-mailchimp", size: 112 },
+  { src: "/assets/mobbin-icons/icon-3.webp", className: "home-hero-icon-airbnb", size: 112 },
+  { src: "/assets/mobbin-icons/retro.webp", className: "home-hero-icon-retro", size: 112 },
+  { src: "/assets/mobbin-icons/twitch.webp", className: "home-hero-icon-twitch", size: 112 },
+  { src: "/assets/mobbin-icons/icon-1.webp", className: "home-hero-icon-wise", size: 112 },
+  { src: "/assets/mobbin-icons/nike.webp", className: "home-hero-icon-nike", size: 112 },
+  { src: "/assets/mobbin-icons/apple-tv.webp", className: "home-hero-icon-apple", size: 112 }
 ];
 
-const cycleDuration = 5000;
-
-function HumanHand() {
-  return (
-    <img
-      className="home-human-hand"
-      src="/assets/hero/human-hand-reference.webp"
-      alt=""
-      aria-hidden="true"
-      decoding="async"
-      draggable={false}
-    />
-  );
-}
-
-function RobotHand() {
+function MobbinLogo() {
   return (
     <svg
-      className="home-robot-hand"
-      viewBox="0 0 780 380"
-      role="img"
-      aria-label=""
+      className="home-hero-logo"
+      width="449"
+      height="64"
+      viewBox="0 0 449 64"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
       focusable="false"
     >
-      <defs>
-        <linearGradient id="robotWhite" x1="6%" y1="100%" x2="92%" y2="0%">
-          <stop offset="0%" stopColor="#b7c3d7" />
-          <stop offset="45%" stopColor="#f9fbff" />
-          <stop offset="100%" stopColor="#dfe7f4" />
-        </linearGradient>
-        <linearGradient id="robotBlue" x1="0%" y1="50%" x2="100%" y2="50%">
-          <stop offset="0%" stopColor="#053d93" />
-          <stop offset="55%" stopColor="#0b78ff" />
-          <stop offset="100%" stopColor="#7dd3fc" />
-        </linearGradient>
-        <filter id="robotShadow" x="-25%" y="-30%" width="150%" height="170%">
-          <feDropShadow dx="0" dy="24" stdDeviation="20" floodColor="#020817" floodOpacity="0.36" />
-        </filter>
-      </defs>
-      <g filter="url(#robotShadow)">
-        <path
-          className="robot-arm"
-          d="M425 206 C526 192 632 177 815 151 L815 289 C632 295 529 294 422 281 C388 277 374 219 425 206 Z"
-          fill="url(#robotWhite)"
-        />
-        <path
-          className="robot-arm-highlight"
-          d="M455 221 C566 207 664 194 800 179 L800 210 C654 221 554 231 450 243 C431 245 429 224 455 221 Z"
-        />
-        <ellipse cx="422" cy="242" rx="44" ry="66" fill="#091326" transform="rotate(-82 422 242)" />
-        <ellipse cx="416" cy="241" rx="31" ry="49" fill="url(#robotBlue)" transform="rotate(-82 416 241)" />
-        <path
-          className="robot-palm"
-          d="M246 187 C299 154 389 166 430 217 C463 257 436 310 366 318 C303 326 234 300 214 256 C200 225 214 206 246 187 Z"
-          fill="url(#robotWhite)"
-        />
-        <path
-          className="robot-knuckle-bar"
-          d="M236 183 C281 150 380 160 424 205 C400 206 263 203 232 218 C224 205 225 193 236 183 Z"
-        />
-        <g className="robot-fingers">
-          <g className="robot-finger robot-finger-one">
-            <rect x="244" y="74" width="64" height="145" rx="28" fill="url(#robotWhite)" />
-            <rect x="254" y="91" width="44" height="40" rx="18" fill="rgba(255,255,255,0.72)" />
-            <circle cx="276" cy="210" r="17" fill="url(#robotBlue)" />
-          </g>
-          <g className="robot-finger robot-finger-two">
-            <rect x="309" y="64" width="66" height="152" rx="29" fill="url(#robotWhite)" />
-            <rect x="320" y="82" width="45" height="42" rx="18" fill="rgba(255,255,255,0.72)" />
-            <circle cx="342" cy="208" r="17" fill="url(#robotBlue)" />
-          </g>
-          <g className="robot-finger robot-finger-three">
-            <rect x="375" y="80" width="63" height="143" rx="27" fill="url(#robotWhite)" />
-            <rect x="385" y="96" width="43" height="39" rx="18" fill="rgba(255,255,255,0.72)" />
-            <circle cx="406" cy="214" r="16" fill="url(#robotBlue)" />
-          </g>
-          <g className="robot-finger robot-finger-four">
-            <rect x="432" y="115" width="55" height="112" rx="24" fill="url(#robotWhite)" />
-            <rect x="441" y="129" width="37" height="31" rx="15" fill="rgba(255,255,255,0.72)" />
-            <circle cx="460" cy="218" r="15" fill="url(#robotBlue)" />
-          </g>
-        </g>
-        <g className="robot-thumb">
-          <rect x="186" y="216" width="118" height="55" rx="24" fill="url(#robotWhite)" transform="rotate(24 245 244)" />
-          <circle cx="263" cy="260" r="16" fill="url(#robotBlue)" />
-        </g>
-        <path
-          className="robot-seam"
-          d="M273 284 C321 303 384 299 415 270"
-        />
-      </g>
+      <path d="M362.692 63.9463C376.111 63.9463 383.357 52.6692 383.357 40.0497C383.357 27.4301 376.379 16.3141 362.585 16.3141C356.309 16.3141 350.74 18.9669 348.361 22.8742V0.741064H336.285V62.9797H348.361V56.3536C350.793 60.7624 355.922 63.9463 362.692 63.9463ZM359.633 52.7229C352.226 52.7229 347.824 46.8159 347.824 39.5664C347.824 32.3168 352.601 26.4635 359.74 26.4635C367.63 26.4635 371.548 32.8538 371.548 39.5664C371.548 46.2789 366.986 52.7229 359.633 52.7229ZM407.027 62.9797H419.265V39.9423C419.265 33.0686 421.68 27.5912 428.497 27.5912C435.313 27.5912 436.762 33.1223 436.762 39.5664V62.9797H449V35.8073C449 24.1544 443.15 16.3141 432.737 16.3141C426.723 16.3141 420.88 18.8665 418.943 25.7359V18.9455H407.027V62.9797ZM387.453 13.4573H401.589V0H387.453V13.4573ZM388.375 62.9797H400.667V18.9455H388.375V62.9797ZM310.789 63.9463C324.208 63.9463 331.454 52.6692 331.454 40.0497C331.454 27.4301 324.476 16.3141 310.682 16.3141C304.406 16.3141 298.838 18.9669 296.458 22.8742V0.741064H284.382V62.9797H296.458V56.3536C298.89 60.7624 304.019 63.9463 310.789 63.9463ZM307.73 52.7229C300.323 52.7229 295.922 46.8159 295.922 39.5664C295.922 32.3168 300.699 26.4635 307.837 26.4635C315.727 26.4635 319.646 32.8538 319.646 39.5664C319.646 46.2789 315.083 52.7229 307.73 52.7229ZM255.503 52.5264C247.805 52.5264 243.577 46.8309 243.577 39.8349C243.577 32.3501 248.293 27.1433 255.503 27.1433C263.418 27.1433 267.755 33.1637 267.755 39.8349C267.755 46.5061 263.256 52.5264 255.503 52.5264ZM255.505 64C270.051 64 279.336 53.958 279.336 40.1571C279.336 26.3561 269.729 16.0993 255.505 16.0993C241.281 16.0993 231.996 26.3024 231.996 40.1571C231.996 54.0117 241.604 64 255.505 64ZM160.878 63.4093H172.901V20.6L188.198 60.9391H199.684L214.982 20.6V63.4093H227.005V0.741064H211.386L193.942 48.1047L176.551 0.741064H160.878V63.4093ZM47.2358 63.4093H82.7155L97.1951 47.9495V63.4093H136.306V26.3921H114.333V0.755563H81.0854L66.1366 16.3421V0.755563H27.7613L0 30.077V63.3937L31.9377 63.4082L47.2358 47.0753V63.4093Z" />
     </svg>
   );
 }
 
 export function HomeHero() {
-  const [iconIndex, setIconIndex] = useState(0);
-  const activeIcon = appIcons[iconIndex];
-
-  useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      setIconIndex((current) => (current + 1) % appIcons.length);
-    }, cycleDuration);
-
-    return () => window.clearInterval(intervalId);
-  }, []);
-
-  const iconStyle = {
-    "--hero-icon-color": activeIcon.color,
-    "--hero-icon-glow": activeIcon.glow
-  } as CSSProperties;
-
   return (
     <section className="home-hero" aria-labelledby="home-hero-title">
-      <div className="home-hero-bg" aria-hidden="true" />
-      <div className="home-hero-grid" aria-hidden="true" />
-      <div className="home-hero-geometry" aria-hidden="true" />
-      <div className="home-hero-content">
-        <h1 id="home-hero-title">Never Miss Leads Again</h1>
-        <p>
-          We build AI operational and voice systems that answer your calls,
-          <br />
-          {" "}qualify leads, and handle follow-ups automatically.
-        </p>
-        <div className="home-hero-actions">
-          <Link className="home-hero-primary" href="/contact">
-            Get in touch <span aria-hidden="true">→</span>
-          </Link>
-          <Link className="home-hero-secondary" href="/#services">
-            View services
-          </Link>
+      <div className="home-hero-frame" aria-hidden="true" />
+      <nav className="home-hero-nav" aria-label="Mobbin sample navigation">
+        <Link className="home-hero-brand" href="/" aria-label="Mobbin">
+          <MobbinLogo />
+        </Link>
+        <div className="home-hero-nav-links">
+          <Link href="/#pricing">Pricing</Link>
+          <Link href="/about">Awards</Link>
+          <Link href="/contact">Log in</Link>
+          <Link className="home-hero-join" href="/contact">Join for free</Link>
         </div>
+      </nav>
+      <div className="home-hero-orbit" aria-hidden="true">
+        {floatingIcons.map((icon) => (
+          <Image
+            key={icon.className}
+            className={`home-hero-floating-icon ${icon.className}`}
+            src={icon.src}
+            alt=""
+            aria-hidden="true"
+            width={icon.size}
+            height={icon.size}
+            draggable={false}
+            priority={icon.className === "home-hero-icon-dropbox"}
+          />
+        ))}
       </div>
-      <div className="home-hero-visual" aria-hidden="true">
-        <div className="home-human-stage">
-          <HumanHand />
-        </div>
-        <div className="home-icon-stage" key={activeIcon.name} style={iconStyle}>
-          <div className="home-app-icon">
-            <span>{activeIcon.mark}</span>
-          </div>
-        </div>
-        <div className="home-robot-stage">
-          <div className="home-robot-glow" />
-          <RobotHand />
-        </div>
+      <div className="home-hero-content">
+        <p className="home-hero-eyebrow">A growing library of</p>
+        <h1 id="home-hero-title" className="home-hero-stats">
+          <span>1,727 apps</span>
+          <span>597,500 screens</span>
+          <span>137,800 flows</span>
+        </h1>
       </div>
     </section>
   );

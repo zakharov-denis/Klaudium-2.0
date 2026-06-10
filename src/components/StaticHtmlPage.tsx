@@ -7,6 +7,7 @@ type StaticHtmlPageProps = {
   name: string;
   contact?: boolean;
   beforeContent?: ReactNode;
+  hideHeader?: boolean;
   pageClassName?: string;
 };
 
@@ -14,13 +15,14 @@ export function StaticHtmlPage({
   name,
   contact = false,
   beforeContent,
+  hideHeader = false,
   pageClassName = ""
 }: StaticHtmlPageProps) {
   const html = readGeneratedPage(name);
 
   return (
     <>
-      <SiteHeader />
+      {!hideHeader && <SiteHeader />}
       {beforeContent}
       <div
         className={`static-page ${pageClassName}`.trim()}

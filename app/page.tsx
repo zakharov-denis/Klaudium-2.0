@@ -8,6 +8,7 @@ export default function HomePage() {
     <StaticHtmlPage
       name="home"
       beforeContent={<HomeHero />}
+      hideHeader
       pageClassName="home-static-rest"
     />
   );
