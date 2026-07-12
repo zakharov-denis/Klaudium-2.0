@@ -97,6 +97,12 @@ interface EnrollModalProps {
 type Step = "details" | "payment" | "success";
 
 export function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
+  if (!isOpen) return null;
+
+  return <EnrollModalContent onClose={onClose} />;
+}
+
+function EnrollModalContent({ onClose }: { onClose: () => void }) {
   const [step, setStep] = useState<Step>("details");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -104,17 +110,6 @@ export function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
   const [fetchError, setFetchError] = useState<string | null>(null);
   const [fetching, setFetching] = useState(false);
   const overlayRef = useRef<HTMLDivElement>(null);
-
-  // Reset when modal opens
-  useEffect(() => {
-    if (isOpen) {
-      setStep("details");
-      setName("");
-      setEmail("");
-      setClientSecret(null);
-      setFetchError(null);
-    }
-  }, [isOpen]);
 
   // Close on Escape
   useEffect(() => {
@@ -151,8 +146,6 @@ export function EnrollModal({ isOpen, onClose }: EnrollModalProps) {
       setFetching(false);
     }
   };
-
-  if (!isOpen) return null;
 
   return (
     <div
