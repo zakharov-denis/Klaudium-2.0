@@ -5,7 +5,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-header-inner">
         <Link className="site-logo" href="/">
-          Klaudium Studio
+          Brillas Labs
         </Link>
         <nav className="site-links" aria-label="Primary">
           <Link className="site-course" href="/coursedemo">

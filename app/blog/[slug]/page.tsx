@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   if (slug === newArticleSlug) {
     return {
-      title: "5 Mistakes to Avoid When Building an AI Service | Klaudium Studio",
+      title: "5 Mistakes to Avoid When Building an AI Service | Brillas Labs",
       description: "Avoid the five most common AI startup mistakes. Learn bottleneck analysis, outcome-first planning, MVP development, customer validation, and prioritization."
     };
   }

@@ -19,9 +19,9 @@ export function SiteChrome({ children }: { children: ReactNode }) {
       <footer className="chrome-footer">
         <div>
           <Link className="chrome-footer-logo" href="/">
-            Klaudium Studio
+            Brillas Labs
           </Link>
-          <p>Klaudium Studio– Automate Smarter, Optimize Faster, and Grow Stronger.</p>
+          <p>AI infrastructure for real business workflows.</p>
         </div>
         <div className="chrome-footer-grid">
           <div>
@@ -48,7 +48,7 @@ export function SiteChrome({ children }: { children: ReactNode }) {
         </div>
       </footer>
       <footer className="chrome-legal">
-        <Link href="/terms-of-use">Copyright 2026 Klaudium Studio</Link>
+        <Link href="/terms-of-use">Copyright 2026 Brillas Labs</Link>
         <Link href="/terms-of-use">Terms of Use</Link>
         <Link href="/privacy-page">Privacy Policy</Link>
       </footer>
