@@ -1,8 +1,24 @@
 import { notFound } from "next/navigation";
 import { ArticlePage } from "@/components/ArticlePage";
+import { FiveMistakesArticle } from "@/components/FiveMistakesArticle";
+import type { Metadata } from "next";
 import { StaticHtmlPage } from "@/components/StaticHtmlPage";
 
 export const dynamic = "force-static";
+
+const newArticleSlug = "5-mistakes-to-avoid-when-building-an-ai-service";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  if (slug === newArticleSlug) {
+    return {
+      title: "5 Mistakes to Avoid When Building an AI Service | Klaudium Studio",
+      description: "Avoid the five most common AI startup mistakes. Learn bottleneck analysis, outcome-first planning, MVP development, customer validation, and prioritization."
+    };
+  }
+  return {};
+}
+
 
 const postPages: Record<string, string> = {
   "the-future-of-ai-automation-how-it-s-changing-business-operations":
@@ -39,7 +55,7 @@ const postFallbacks: Record<string, ArticleFallback> = {
 };
 
 export function generateStaticParams() {
-  return [...Object.keys(postPages), ...Object.keys(postFallbacks)].map((slug) => ({ slug }));
+  return [newArticleSlug, ...Object.keys(postPages), ...Object.keys(postFallbacks)].map((slug) => ({ slug }));
 }
 
 export default async function BlogPostPage({
@@ -48,6 +64,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (slug === newArticleSlug) return <FiveMistakesArticle />;
   const page = postPages[slug];
   const fallback = postFallbacks[slug];
   if (fallback) return <ArticlePage {...fallback} />;
