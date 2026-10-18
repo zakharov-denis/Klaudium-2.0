@@ -74,6 +74,13 @@
 .br-table-scroll td { border-top: 1px solid #f0e1d6; background: #fffdfa; padding: 13px 17px; color: #3d342f; vertical-align: top; }
 .br-takeaway { margin: 24px 0 10px; padding: 20px 22px; background: #fff0e6; border-left: 3px solid #ff4f00; border-radius: 0 8px 8px 0; color: #3c312d; line-height: 1.65; }
 .br-takeaway strong { display: block; margin-bottom: 3px; }
+.br-roadmap-resource { margin: 24px 0; padding: 20px 22px; border: 1px solid #f3c5a8; border-radius: 12px; background: #fff3e9; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+.br-roadmap-resource div { display: grid; gap: 2px; }
+.br-roadmap-resource strong { color: #171717; font-size: 16px; }
+.br-roadmap-resource span { color: #5b4d44; font-size: 14px; line-height: 1.5; }
+.br-roadmap-resource a { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; border-radius: 7px; background: #ff4f00; color: #fff; padding: 11px 16px; font-size: 14px; font-weight: 700; line-height: 1.2; box-shadow: 0 5px 14px rgba(188, 55, 0, .16); }
+.br-roadmap-resource a:hover { background: #e84700; }
+.br-roadmap-resource a:focus-visible { outline: 3px solid rgba(255, 79, 0, .3); outline-offset: 3px; }
 .br-final-cta { margin-top: 58px; background: #161616; border-radius: 14px; padding: clamp(25px, 5vw, 46px); color: #fff; }
 .br-final-cta-label { color: #ff9759; font-size: 11px; font-weight: 700; letter-spacing: .13em; }
 .br-final-cta h2 { font-size: clamp(28px, 3.5vw, 39px); line-height: 1.1; margin: 15px 0; color: #fff; }
@@ -96,6 +103,8 @@
   .br-prose { font-size: 16px; line-height: 1.7; }
   .br-toc { padding: 18px; }
   .br-prose section { margin-top: 42px; }
+  .br-roadmap-resource { align-items: stretch; flex-direction: column; }
+  .br-roadmap-resource a { width: 100%; }
 }
 @media(prefers-reduced-motion:reduce) {
   .br-card { transition: none; }
