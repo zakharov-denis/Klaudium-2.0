@@ -243,6 +243,17 @@ export function FiveMistakesArticle() {
             <section aria-labelledby="first-week">
               <h2 id="first-week">Putting It Together: Your First Week</h2>
               <p>You don’t need months of planning to start testing an AI idea.</p>
+              <p>
+                Use this{" "}
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1QzvBxx30t102U7c8g0Yu1byr2zaEoOwWBwisAIbOoHo/edit?gid=261050870#gid=261050870"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  product management roadmap template
+                </a>{" "}
+                to turn the framework into an actionable weekly plan.
+              </p>
               <div className="br-table-scroll">
                 <table>
                   <thead><tr><th>Day</th><th>Activity</th><th>Deliverable</th></tr></thead>
