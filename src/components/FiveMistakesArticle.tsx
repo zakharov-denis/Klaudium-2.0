@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteChrome } from "./SiteChrome";
 import "./blog-editorial.css";
@@ -256,6 +257,23 @@ export function FiveMistakesArticle() {
                   Open the roadmap template →
                 </a>
               </aside>
+              <figure className="br-roadmap-preview">
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1QzvBxx30t102U7c8g0Yu1byr2zaEoOwWBwisAIbOoHo/edit?gid=261050870#gid=261050870"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open the product management roadmap template in Google Sheets"
+                >
+                  <Image
+                    src="/assets/blog/product-management-roadmap-template.png"
+                    alt="Preview of the product management roadmap template in Google Sheets"
+                    width={2074}
+                    height={1032}
+                    sizes="(max-width: 780px) 100vw, 738px"
+                  />
+                </a>
+                <figcaption>Preview of the editable Google Sheets roadmap template.</figcaption>
+              </figure>
               <div className="br-table-scroll">
                 <table>
                   <thead><tr><th>Day</th><th>Activity</th><th>Deliverable</th></tr></thead>
