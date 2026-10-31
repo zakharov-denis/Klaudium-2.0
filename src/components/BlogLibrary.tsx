@@ -5,6 +5,15 @@ import "./blog-editorial.css";
 
 const posts = [
   {
+    href: "/blog/14-ai-agent-architecture-mistakes",
+    category: "Architecture",
+    title: "14 AI Agent Architecture Mistakes",
+    image: "",
+    alt: "",
+    number: "14",
+    readingTime: "18 min read"
+  },
+  {
     href: "/blog/5-mistakes-to-avoid-when-building-an-ai-service",
     category: "Article",
     title: "5 Mistakes to Avoid When Building an AI Service",
@@ -71,7 +80,7 @@ export function BlogLibrary() {
                   />
                 ) : (
                   <div className="br-number-art" aria-hidden="true">
-                    <span>05</span>
+                    <span>{("number" in post && post.number) || "05"}</span>
                   </div>
                 )}
               </div>
