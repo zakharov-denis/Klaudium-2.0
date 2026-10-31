@@ -1,15 +1,23 @@
 import { notFound } from "next/navigation";
 import { ArticlePage } from "@/components/ArticlePage";
 import { FiveMistakesArticle } from "@/components/FiveMistakesArticle";
+import { FourteenMistakesArticle } from "@/components/FourteenMistakesArticle";
 import type { Metadata } from "next";
 import { StaticHtmlPage } from "@/components/StaticHtmlPage";
 
 export const dynamic = "force-static";
 
 const newArticleSlug = "5-mistakes-to-avoid-when-building-an-ai-service";
+const agentArticleSlug = "14-ai-agent-architecture-mistakes";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  if (slug === agentArticleSlug) {
+    return {
+      title: "14 AI Agent Architecture Mistakes | Brillas",
+      description: "Fourteen architecture mistakes across seven AI agent stages, with fictional customer-support examples, backend safeguards, retrieval choices, and testing strategies."
+    };
+  }
   if (slug === newArticleSlug) {
     return {
       title: "5 Mistakes to Avoid When Building an AI Service | Klaudium Studio",
@@ -55,7 +63,7 @@ const postFallbacks: Record<string, ArticleFallback> = {
 };
 
 export function generateStaticParams() {
-  return [newArticleSlug, ...Object.keys(postPages), ...Object.keys(postFallbacks)].map((slug) => ({ slug }));
+  return [agentArticleSlug, newArticleSlug, ...Object.keys(postPages), ...Object.keys(postFallbacks)].map((slug) => ({ slug }));
 }
 
 export default async function BlogPostPage({
@@ -64,6 +72,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  if (slug === agentArticleSlug) return <FourteenMistakesArticle />;
   if (slug === newArticleSlug) return <FiveMistakesArticle />;
   const page = postPages[slug];
   const fallback = postFallbacks[slug];
